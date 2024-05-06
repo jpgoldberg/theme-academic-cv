@@ -41,13 +41,13 @@ sections:
     content:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
+      username: jpgoldberg
   - block: skills
     content:
       title: Skills
       text: ''
       # Choose a user to display skills from (a folder name within `content/authors/`)
-      username: admin
+      username: jpgoldberg
     design:
       columns: '1'
   - block: experience
@@ -62,19 +62,23 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
-          date_end: ''
+        - title: Principal Security Architect, Chief Defender Against the Dark Arts, Support
+          company: 1Password
+          company_url: 'https://1password.com'
+          # company_logo: org-gc
+          location: Remote
+          date_start: '2010-04-01'
+          date_end: '2023-06-30'
           description: |2-
-              Responsibilities include:
 
-              * Analysing
-              * Modelling
-              * Deploying
+              * Assisted in Security design of OPVault format (introduced 2012)
+              *  Assisted in Security design of 1Password service (introduced 2015)
+              * Managed team responsible for all aspects of product and organization security (2013–2022)
+              * Developed internal and external security documentation
+              * Developed first security manual and incident response plan
+              * Reviewed code (Rust, Go, Swift, Typescript, Kotlin, Java, Objective-C)
+              * Primary developer of SRP and password generator modules (Go, Rust)
+              
         - title: Professor of Semiconductor Physics
           company: University X
           company_url: ''
