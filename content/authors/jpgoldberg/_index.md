@@ -3,10 +3,10 @@
 title: Jeffrey Goldberg
 
 # Name pronunciation (optional)
-name_pronunciation: /ˈdʒɛfri ˈɡoʊldbɹ̩ɡ/ 
+# name_pronunciation: /ˈdʒɛfri ˈɡoʊldbɹ̩ɡ/ 
 
 # Full name (for SEO)
-first_name: Jeffrey Paul
+first_name: Jeffrey
 last_name: Goldberg
 
 # Status emoji
@@ -29,8 +29,8 @@ bio: My superpower is faking expertise in a wide variety of subjects
 
 # Interests to show in About widget
 interests:
-  - Security and Privacy
-  - History of Mathematics
+  - Security & Privacy
+  - Mathematics History
   - Cognitive Science
   - Linguistics & Anthropology
 
@@ -91,32 +91,34 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '/#contact'
-  - icon: twitter
+    link: 'mailto:jeffrey@goldmark.org'
+  - icon: mastodon
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-    label: Follow me on Twitter
+    link: https://ioc.exchange/@jpgoldberg
+    label: jpgoldberg@ioc.exchange
     display:
       header: true
-  - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  # - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
+  #  icon_pack: fas
+  #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://github.com/jpgoldberg
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: https://www.linkedin.com/in/jeffrey-goldberg-390692122/
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: uploads/resume.pdf
+    link: uploads/cv.pdf
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Jeffrey Goldberg followed the old-school path of academic to Unix system administration and information security and privacy.
+He brings his familiarity with things as disparate as Linguistics, Behavioral Decision Making, Statistical Inferencing, and more
+to trying to help people have more control over their data.
+He also never passes up an opportunity to either teach or learn.
 {style="text-align: justify;"}
