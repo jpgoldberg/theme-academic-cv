@@ -49,9 +49,9 @@ education:
 skills:
   - name: Technical
     items:
-      - name: Python
-        description: ''
-        percent: 80
+      - name: Programming
+        description: 'Go, Rust, Python, Swift, C'
+        percent: 70
         icon: python
         icon_pack: fab
       - name: Data Science
