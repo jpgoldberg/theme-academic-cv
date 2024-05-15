@@ -77,16 +77,42 @@ sections:
               * Developed internal and external security documentation
               * Developed first security manual and incident response plan
               * Reviewed code (Rust, Go, Swift, Typescript, Kotlin, Java, Objective-C)
-              * Primary developer of SRP and password generator modules (Go, Rust)
+              * Primary developer of SRP and password generator modules 
+        
+        - title: Freelance system administration
+          location: Riverside, California; Plano, Texas
+          date_start: "2000-09-01"
+          date_end: "2008-10-01"
+          description: |2-
+
+            * Installed and managed network services for small and medium sized enterprises
+            * Linux and FreeBSD system setup, firewalls (m0n0wall, iptables), mail transport (exim, sendmail, UW imapd, spamassassin)
+       
+        - title:  Asst. Information Officer, Network Programmer
+          company: Cranfield University Computing Centre
+          location: Cranfield, Beds., UK
+          date_start: '1994-04-01'
+          date_end: '2000-06-15'
+          description: |2-
+
+             * Cranfield University (UK) was among the very first UK universities to enable staff and students to create personal web pages.
+             * Taught Introduction to C Programing to Masters students in the Applied Mathematics and Computing Department (Autumn 1999)
+             * Set up and managed email system (exim, uw-imapd)
+             * Trained staff and students in web technology, PGP, and \LaTeX
+             * Assisted information officer in developing and maintaining university website
+             * Unix system (OSF, Linux) administration, DNS (bind), NTP, general scripting
+  
+        - title: Researcher
+          company: Research Institute for Linguistics, Hungarian Academy of Science
+          position: Researcher
+          location: Budapest, Hungary
+          date_start: "1988-09-01"
+          date_end: "1993-11-01"
+          description: |2-
+
+            * Taught Syntax and Computing in Theoretical Linguistics Department
+            * Unix system administration work
               
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
     design:
       columns: '2'
   - block: accomplishments
