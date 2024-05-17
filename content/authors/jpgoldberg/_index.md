@@ -47,22 +47,52 @@ education:
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
-  - name: Technical
+  - name: 'Programming languages'
+    items:
+
+      - name: 'Primary developer of apps, packages, crates'
+        description: "I’ve developed apps or components in Go, Rust, Python, C, R"
+        percent: 70 
+
+      - name: 'Contributed code to projects using'
+        description: 'Objective-C, Java, Kotlin in addition to above'
+        percent: 70
+
+      - name: 'Reviewed code'
+        description: 'Typescript, Javascript in addition to the above'
+        percent: 40
+
+      - name: Taught
+        description: 'I have taught C and Unix utilities'
+        percent: 85
+
+
+  - name: 'Other technical'
     items:
       - name: Cryptography
         description: "Not a cryptographer, but can read many primary sources"
         percent: 70
-      - name: Programming
-        description: 'I have contributed to projects using Go, Rust, Python, Swift, C'
+
+      - name: Secure Development
+        description: Advised and encouraged practices that lead to more secure code
         percent: 70
+
       - name: Statistical inferencing
         description: 'Not only can I compute _p_ values, I know when not to use them.'
-        percent: 70
-      - name: Technical writing
-        description: 'I have a pathological compulsion to explain things'
+        percent: 60
+
+      - name: TeX/LaTeX
+        description: Have produced complicated documents using LaTeX and am the author of several LaTeX packages.
         percent: 80
-      - name: Secure Development
-        description: Secure coding practices produce better code all around
+
+      - name: Unix (software development) tools
+        description: Make, git, etc; GitHub actions
+        percent: 90
+
+
+      
+
+
   
   
 
