@@ -76,3 +76,18 @@ are included in the package [documentation](https://jpgoldberg.github.io/powerse
 
 The project itself is on GitHub: https://github.com/jpgoldberg/powerset-generator
 
+## Hostname
+
+I was surprised to learn that there was no standard's compliant
+Python tool for validating whether a string is a valid Internet
+hostname.
+And so I developed [python-hostname](https://github.com/jpgoldberg/python-hostname),
+which I have chosen not to publish on PyPi.
+It is likely that other packages will introduce
+good ways to syntactically validate hostnames,
+and so there will be little need for my package.
+Nonetheless, the extensive
+[documentation](https://jpgoldberg.github.io/python-hostname/)
+I have created for it
+should help illustrate properly validating hostnames
+is not as simple as a search of Stack Exchange might suggest.
