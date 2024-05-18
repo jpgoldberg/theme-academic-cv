@@ -133,4 +133,4 @@ Jeffrey Goldberg followed the old-school path of academic to Unix system adminis
 He brings his familiarity with things as disparate as Linguistics, Behavioral Decision Making, Statistical Inferencing, and more
 to trying to help people have more control over their data.
 He also never passes up an opportunity to either teach or learn.
-{style="text-align: justify;"}
+{style="text-align: left;"}
