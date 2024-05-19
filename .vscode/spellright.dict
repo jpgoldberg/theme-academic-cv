@@ -2,3 +2,6 @@ iptables
 exim
 imapd
 spamassassin
+pyca
+sympy
+primefac

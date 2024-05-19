@@ -91,3 +91,28 @@ Nonetheless, the extensive
 I have created for it
 should help illustrate properly validating hostnames
 is not as simple as a search of Stack Exchange might suggest.
+
+## Toy Cryptography
+
+It is probably best for me to just quote from the `README`,
+of my toy-crypto-math [repository](https://github.com/jpgoldberg/toy-crypto-math)
+
+> This is almost certainly not the package you are looking for.
+>
+> The material here is meant for learning purposes only, often my own learning.
+> Do not use it for anything else. And if you do, understand that it focuses on what
+> I am trying to illustrate or learn. It may not always be correct.
+>
+> - If you want to use cryptographic tools in Python use [pyca].
+> - If you want to play with some of the mathematics of some things underlying Cryptography in
+> a Python-like environment use [SageMath], [sympy], or [primefac].
+
+[pyca]: https://cryptography.io
+[SageMath]: https://doc.sagemath.org/
+[sympy]: https://www.sympy.org/en/
+[primefac]: https://pypi.org/project/primefac/
+
+I do not foresee ever producing a package for distribution of this.
+And if I do, I would certainly need to include more prominent warnings.
+
+
