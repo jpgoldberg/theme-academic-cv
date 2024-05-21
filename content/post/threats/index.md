@@ -30,6 +30,23 @@ projects: []
 
 So you have hit upon one of my biggest gripes about how threat modeling is conceived. It is often tacitly focused on "what we can defend against".
 
+
+## All that's green does not glitter
+
+Let's consider a threat model lived for about a quarter of a century.
+
+{{< quote source="Ramasamy et al (2011)"
+    src="https://www.usenix.org/legacy/event/hotice11/tech/full_papers/Ramasamy.pdf" >}}
+The intranet is a trusted network environment for hosting systems, services, and data internal to the enterprise.
+The opennet is an untrusted network environment (e.g., the Internet) that includes all systems external to the enterprise.
+{{< /quote >}}
+
+In what follows, I will be referring to these as the “green zone” and the ”red zone” respectively.
+I am ignoring yellow zones (DMZ) and other zones security zones that may have been put in place. 
+
+The relevant portion of the accompanying threat model was that network traffic originating inside the green zone was benign,
+while traffic originating from the red zone may be malicious.
+
 Consider the old days of network topology which had a physical organization network with a gateway to out to be the big bad world. Often the servers within the network were hard to upgrade, both as security patches were less commonly available, and any software or system upgrade could easily break things.
 
 In those days, we operated under the assumption that traffic originating from outside of the organization's network (red zone) might be hostile, while traffic from instead the network (green zone) was trustworthy. This was the basis of the threat model that put all of our defenses on the perimeter firewall.
