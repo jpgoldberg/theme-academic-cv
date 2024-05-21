@@ -2,7 +2,7 @@
 	{{.Inner}}
     {{ if .Get "source" }}
     <footer class="blockquote-footer">
-		<cite title="Quelle: {{ with .Get "source"}}{{.}}{{ end }}">
+		<cite title="Source: {{ with .Get "source"}}{{.}}{{ end }}">
             {{ with .Get "src"}}
                 From
                 <a href="{{.}}" target="_blank" rel="noopener noreferrer">
