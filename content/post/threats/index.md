@@ -119,6 +119,39 @@ In short, our practical defensive technologies drove our threat model.
 Anti-virus and frequent re-imaging of user workstations was a regular practice,
 illustrating that people did know that the green zone wasn't always trustworthy.
 
+## A local encryption example
+
+I recall a browser vendor defending their choice (at the time) to not encrypt
+user passwords locally for their built-in password manager with something like,
+“if an attacker gains control of the user's system they will be able to
+capture user secrets on the fly, even if those are encrypted at rest."
+That is certainly a true statement,
+but fails to recognize that it is much easier for an attacker to obtain read access
+to a user's system then it is to maintain the kind of control needed to capture data
+when a user decrypts.
+In short, I felt that we were being presented with a bogus threat model to defend a design choice.
+
+The design choice could have been defended.
+At the time, not few operating systems offered tools for user secret storage,
+and requiring users to enter a master password to use their browser's password manager
+might severely limit uptake in using it.
+Furthermore it posed a data availability risk to the user if they forgot the password they
+used to decrypt their password data.
+Whether I agree with their design choice at the time or not,
+I fully recognize that it was a reasonable decision.
+
+Their insistence (as I recall, perhaps incorrectly)
+on what I felt was a bogus threat model argument
+did not inspire confidence in their security analysis.
+I assumed that they were being honest when they said silly things
+about the threats.
+They would have been less likely to talk themselves into their
+threat model if they had been willing to
+explicitly acknowledge to themselves and to others
+that there choice was based on trade-offs involving usability
+and the defenses available to them.
+
+
 ## Where things go wrong
 
 I absolutely support the practice of putting our defenses where we can.
