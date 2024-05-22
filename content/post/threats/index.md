@@ -55,6 +55,54 @@ but that hardly means that we shouldn't worry about threats from within the orga
 
 ### The Rationale
 
+For those two young to recall the technological environment in which that threat model emerged,
+there are two important things to note.
+
+Organizations typically had their hosts on premise,
+including both servers and user workstations.
+This meant that there was a natural distinction between internal and external networks,
+with a one or a small number of gateways between the two.
+Firewalls could be incorporated into those gateways or immediately adjacent to them.
+The network topology gave us a place to filter and block suspect network traffic.
+We had a perimeter that could be defended with perimeter firewalls.
+
+Another point about the technological environment is that IT managers and system administrators
+were wary of updating or upgrading server systems and software.
+Updates broke things.
+Client systems often depended on undocumented service behavior.[^822]
+Software and systems vendors were often slow to release security updates.
+Responsible disclosure was not at widely accepted then and so vendors had less incentive to address security vulnerabilities.
+The consequence of all this is that internal systems riddled with exploitable security vulnerabilities.
+
+[^822]: This footnote is too small to contain my rant about systems encouraging the use of malformed data.
+A large part of why things broke after an update is that malformed input was handled differently,
+often subtly so, in new versions.
+Such changes in behavior were often not intended behavior,
+but a side effect of other changes.
+
+In that environment, the practical way to protect servers within the organization was through perimeter firewalls.[^14]
+In short, our practical defensive technologies drove our threat model.
+
+[^14]: Endpoint management of user workstations was also a way to reduce the threat of malicious traffic originating from within the green zone.
+Anti-virus and frequent re-imaging of user workstations was a regular practice,
+illustrating that people did know that the green zone wasn't always trustworthy.
+
+## Where things go wrong
+
+I am absolutely support the practice of putting our defenses where we can.
+There really isn't an alternative to that.
+Relying on perimeter firewalls was a necessity.
+The problem arises when we let that drive our threat model.
+It is far better to explicitly acknowledge threats that we can't defend against
+than to pretend that those threats don't exist or don't matter.
+
+If we come to believe our rationales for excluding something from the threat model
+we may find ourselves slower to adopt technologies that come along to address those threats.
+After all, we aren't going to really notice solutions to problems we don't think we have.
+I have no evidence to suggest that green zone thinking delayed transition from from `telnet` to `ssh`,
+or from {{< abbr "POP3" "Post office protocol" >}} to
+{{< abbr "POP3S" "POP3 over SSL" >}}.
+
 Consider the old days of network topology which had a physical organization network with a gateway to out to be the big bad world. Often the servers within the network were hard to upgrade, both as security patches were less commonly available, and any software or system upgrade could easily break things.
 
 In those days, we operated under the assumption that traffic originating from outside of the organization's network (red zone) might be hostile, while traffic from instead the network (green zone) was trustworthy. This was the basis of the threat model that put all of our defenses on the perimeter firewall.
