@@ -28,20 +28,52 @@ image:
 projects: []
 ---
 
-So you have hit upon one of my biggest gripes about how threat modeling is conceived. It is often tacitly focused on "what we can defend against".
+A recent [post on LinkedIn](https://www.linkedin.com/posts/shostack_the-biggest-threat-to-worms-isnt-early-birds-activity-7198716827294720000-gFZs?utm_source=share&utm_medium=member_desktop)
+by [Adam Shostack](https://shostack.org/about/adam)
+began with 
+
+> The biggest threat to worms isn't early birds, it's rain.
+> The wrong focus for your threat modeling can lead to... I dunno.
+> Rain seems pretty hard to defend against if you're an earthworm.
+
+which reminded me of a concern I have with how I suspect threat modeling is often practiced.
+But before I get to my griping, I would like to say that
+if you have the opportunity to participate in threat modeling training by Adam,
+take that opportunity.
+
+My initial[^0] comment on Adam's post included something like,
+
+> Your worm example reminded me of importance of explicitly acknowledging
+> what we can't defend against instead of creating other rationals
+> for excluding something from the threat model. That is, saying something like,
+> “We exclude rain from our threat model because an attacker powerful enough to control the weather can already own us.”
+> is less helpful than saying,
+> “We exclude rain from our model because we don't (yet) have the tools to defend against it.”
+
+Our inability to defend against the rain is the real reason our choice of threat model,
+while the statements about a possible threat actor is a rationale for that decision.
+This doesn't mean that the rationale is incorrect,
+nor does it mean that our choice of threat model is wrong,
+but I feel that we are far better off if we explicitly acknowledge the real reasons.
+
+[^0]: My initial comment exceeded the character limit of LinkedIn comments,
+a fact that nudged me toward writing the post you are now reading.
+
+In follow-up comments, I shifted to my non-wormy example of perimeter firewalls.
 
 ## All that's green does not glitter
 
-Let's consider a threat model lived for about a quarter of a century.
+Let's consider a threat model that lived for about a quarter of a century,
+as summarized by
+[Ramasamy et al (2011)](https://www.usenix.org/legacy/event/hotice11/tech/full_papers/Ramasamy.pdf "Towards automated identification of security zone classification in enterprise networks")
 
-{{< quote source="Ramasamy et al (2011)"
-    src="https://www.usenix.org/legacy/event/hotice11/tech/full_papers/Ramasamy.pdf" >}}
-The intranet is a _trusted_ network environment for hosting systems, services, and data internal to the enterprise.
-The opennet is an _untrusted_ network environment (e.g., the Internet) that includes all systems external to the enterprise. [Emphasis added]
-{{< /quote >}}
+> The intranet is a _trusted_ network environment for hosting systems, services, and data
+> internal to the enterprise.
+> The opennet is an _untrusted_ network environment (e.g., the Internet)
+> that includes all systems external to the enterprise. [Emphasis added]
 
 In what follows, I will be referring to these as the “green zone” and the ”red zone” respectively.
-I am ignoring yellow zones (DMZ) and other zones security zones that may have been put in place.
+I am ignoring other zones security zones that may have been put in place.
 
 The relevant portion of the accompanying threat model was that network traffic originating inside the green zone was benign,
 while traffic originating from the red zone may be malicious.
@@ -89,7 +121,7 @@ illustrating that people did know that the green zone wasn't always trustworthy.
 
 ## Where things go wrong
 
-I am absolutely support the practice of putting our defenses where we can.
+I absolutely support the practice of putting our defenses where we can.
 There really isn't an alternative to that.
 Relying on perimeter firewalls was a necessity.
 The problem arises when we let that drive our threat model.
@@ -103,18 +135,4 @@ I have no evidence to suggest that green zone thinking delayed transition from f
 or from {{< abbr "POP3" "Post office protocol" >}} to
 {{< abbr "POP3S" "POP3 over SSL" >}}.
 
-Consider the old days of network topology which had a physical organization network with a gateway to out to be the big bad world. Often the servers within the network were hard to upgrade, both as security patches were less commonly available, and any software or system upgrade could easily break things.
 
-In those days, we operated under the assumption that traffic originating from outside of the organization's network (red zone) might be hostile, while traffic from instead the network (green zone) was trustworthy. This was the basis of the threat model that put all of our defenses on the perimeter firewall.
-
-But the green zone assumption was always bogus. And I don't think that anyone genuinely believed it, but the defensive tools that we had gave us the ability to control traffic from the red zone and not from the green zone. So we ended up calling the green zone, green.
-
-So your example of threats to worms. It's fine if we say (A).
-
-(A) We can't defend against rain, so we will exclude that threat from our model.
-
-The practicalities may demand such things as (A). But what I often hear is
-
-(B) We exclude rain from our threat model because an attacker who can manipulate the weather can already defeat everything else we do.
-
-Rationales like (B) may or may not be true, but they are not the real reasons for excluding something from the threat model. It is far better to think about things in terms of (A) because it means that you are both more aware of the risks you face and you have a smoother way of updating your model as new defenses become available. Back to my green/red zone example, I suspect that thinking like that delayed the deployment of zero-trust mechanisms within an organization.
