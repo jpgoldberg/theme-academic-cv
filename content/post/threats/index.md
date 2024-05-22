@@ -30,22 +30,30 @@ projects: []
 
 So you have hit upon one of my biggest gripes about how threat modeling is conceived. It is often tacitly focused on "what we can defend against".
 
-
 ## All that's green does not glitter
 
 Let's consider a threat model lived for about a quarter of a century.
 
 {{< quote source="Ramasamy et al (2011)"
     src="https://www.usenix.org/legacy/event/hotice11/tech/full_papers/Ramasamy.pdf" >}}
-The intranet is a trusted network environment for hosting systems, services, and data internal to the enterprise.
-The opennet is an untrusted network environment (e.g., the Internet) that includes all systems external to the enterprise.
+The intranet is a _trusted_ network environment for hosting systems, services, and data internal to the enterprise.
+The opennet is an _untrusted_ network environment (e.g., the Internet) that includes all systems external to the enterprise. [Emphasis added]
 {{< /quote >}}
 
 In what follows, I will be referring to these as the “green zone” and the ”red zone” respectively.
-I am ignoring yellow zones (DMZ) and other zones security zones that may have been put in place. 
+I am ignoring yellow zones (DMZ) and other zones security zones that may have been put in place.
 
 The relevant portion of the accompanying threat model was that network traffic originating inside the green zone was benign,
 while traffic originating from the red zone may be malicious.
+It is certainly fair to assume that traffic originating from outside the organization is more likely to be hostile than traffic originating internally,
+but that hardly means that we shouldn't worry about threats from within the organizations network.
+
+{{< figure
+  src="ssl_added_and_removed.png"
+  title="SSL added and removed here :-)"
+  caption="Detail of 2103 leaked NSA slide: Source: Washington Post" >}}
+
+### The Rationale
 
 Consider the old days of network topology which had a physical organization network with a gateway to out to be the big bad world. Often the servers within the network were hard to upgrade, both as security patches were less commonly available, and any software or system upgrade could easily break things.
 
