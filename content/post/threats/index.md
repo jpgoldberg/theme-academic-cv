@@ -4,7 +4,7 @@
 title: "Rationalizing threat models"
 subtitle: ""
 summary: "Threat models are often tacitly defined in terms of what we can or can't defend against. This practice should be made explicit instead of creating bogus rationales for excluding the threats we can't defend against."
-authors: []
+authors: [jpgoldberg]
 tags: []
 categories: []
 date: 2024-05-21T11:57:11-05:00
@@ -30,7 +30,7 @@ projects: []
 
 A recent [post on LinkedIn](https://www.linkedin.com/posts/shostack_the-biggest-threat-to-worms-isnt-early-birds-activity-7198716827294720000-gFZs?utm_source=share&utm_medium=member_desktop)
 by [Adam Shostack](https://shostack.org/about/adam)
-began with 
+began with,
 
 > The biggest threat to worms isn't early birds, it's rain.
 > The wrong focus for your threat modeling can lead to... I dunno.
@@ -119,7 +119,19 @@ In short, our practical defensive technologies drove our threat model.
 Anti-virus and frequent re-imaging of user workstations was a regular practice,
 illustrating that people did know that the green zone wasn't always trustworthy.
 
-## A local encryption example
+## Bad rationales raise suspicions
+
+If someone puts forth a rationale for excluding something from a threat model that feels like an excuse,
+it will lead people to wonder real reason is being concealed.
+And people will tend to feel that what is being concealed is worse than
+the excuse itself.
+That suspicion is particularly unfortunate when the real reason is not
+something anyone should be embarrassed by.
+
+I offer a vague and brief example of a case where I was put off by what I considered a bad rationale
+while I expect that the real motivation for a security design decision was perfectly reasonable.
+I am keeping it vague because my memory of this is not sufficiently reliable
+to actually call out specific actions.
 
 I recall a browser vendor defending their choice (at the time) to not encrypt
 user passwords locally for their built-in password manager with something like,
@@ -151,7 +163,6 @@ explicitly acknowledge to themselves and to others
 that there choice was based on trade-offs involving usability
 and the defenses available to them.
 
-
 ## Where things go wrong
 
 I absolutely support the practice of putting our defenses where we can.
@@ -164,8 +175,42 @@ than to pretend that those threats don't exist or don't matter.
 If we come to believe our rationales for excluding something from the threat model
 we may find ourselves slower to adopt technologies that come along to address those threats.
 After all, we aren't going to really notice solutions to problems we don't think we have.
-I have no evidence to suggest that green zone thinking delayed transition from from `telnet` to `ssh`,
+I suspect that green zone thinking delayed transition from from `telnet` to `ssh`,
 or from {{< abbr "POP3" "Post office protocol" >}} to
-{{< abbr "POP3S" "POP3 over SSL" >}}.
+{{< abbr "POP3S" "POP3 over SSL" >}} or of a zero-trust architectures.
+I have no evidence to support my suspicion, but my suspicion remains.
 
+## Explicit inclusion
 
+I completely concur with Adam Shostack's position that
+“Impossible to mitigate implies non-requirement” (Shostack 2014, page 219).
+There really isn't any alternative to that position.
+What I am advocating instead is that we explicitly maintain somewhere in our model
+things that would be requirements if we could mitigate the threats against them.
+
+My recommendation when constructing a threat model is to
+to explicitly maintain a category would-be requirements,
+threats to those would-be requirements,
+and the reasons why we are not capable of defending against those threats.
+
+Defense capabilities is to be defined in terms of the organization's resources and capabilities.
+For example, there may be technologies to defend against a threat,
+but it may be too expensive for the particularly organization to implement those defenses.
+There was a period of time when it would have been impossible to wean an organization from
+Internet Explorer 6, even though upgrades and alternatives were available.
+There may also be cases where implementing a defense creates other security problems,
+a measure such as encrypting passwords locally (as in my browser password management example)
+may create an unacceptable risk data availability.
+These decisions will need to be made on a case by case basis,
+looking at
+users of the system,
+organizational resources,
+available technologies,
+security trade-offs,
+and costs.
+The important thing is that these decisions be made honestly and explicitly.
+
+Maintaining such a list and regularly reviewing
+it will benefit security planning and risk assessment.
+More importantly it will clarify thinking
+in that we are no longer inventing unnecessary rationales when we have clear reasons.
