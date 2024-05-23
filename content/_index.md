@@ -100,9 +100,9 @@ sections:
       filters:
           folders:
             - post
-      author: ""
-      category: ""
-      tag: ""
+      author: "jpgoldberg"
+      # category: ""
+      # tag: ""
       exclude_featured: false
       exclude_future: false
       exclude_past: false
