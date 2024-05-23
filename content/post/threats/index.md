@@ -16,7 +16,7 @@ draft: true
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
+  caption: "Figure 12-1 from Shostack (2014, p 219)"
   focal_point: ""
   preview_only: false
 
