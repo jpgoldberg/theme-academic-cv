@@ -19,18 +19,23 @@ RSYNC_OPTS=-Crltp
 RSYNC_OPTS += -v
 
 
+.PHONY: build
 build:
 	hugo
 
+.PHONY: publish
 publish: build
 	$(RSYNC_CMD) $(RSYNC_OPTS) -e $(SSH_CMD) $(SRC_DIR) $(DEST)
 
+.PHONY: serve
 serve:
 	hugo serve
 
+.PHONY: draft
 draft:
 	hugo -D
 
+.PHONY: serve-draft
 serve-draft:
 	hugo -D serve
 
