@@ -3,3 +3,15 @@ abbr[title], abbr[data-original-title] {
   border-bottom: revert;
   text-decoration-skip-ink: revert;
 }
+
+figure.floatright {
+	max-width: 30%;
+	height: auto;
+	float: right;
+}
+
+figure.floatleft {
+	max-width: 30%;
+	height: auto;
+	float: left;
+}
