@@ -1,7 +1,7 @@
 ---
 title: The blog
 image:
-  caption: "Posts ()"
+  caption: "Posts"
   focal_point: ""
   preview_only: false
 ---
