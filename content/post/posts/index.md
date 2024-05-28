@@ -130,22 +130,84 @@ What she is most remembered for is her guidance on etiqutte.
 
 ### Frans Post {#frans}
 
-{{% callout note %}}
-Someday this will be updated with real content
-{{% /callout %}}
+{{< figure
+  src="Frans_Post.jpg"
+  title="Frans Post"
+  caption="Portrait of Frans Post by Frans Hals, source: Wikipedia"
+  height=60px
+  class="floatright"
+>}}
 
-### Louis Post {#louis}
+From [Wikipedia](https://en.wikipedia.org/wiki/Frans_Post)
 
-{{% callout note %}}
-Someday this will be updated with real content
-{{% /callout %}}
+> Frans Janszoon Post (17 November 1612 – 17 February 1680)
+> was a painter during the Dutch Golden Age.
+> He was the first European artist to paint landscapes of the Americas,
+> during and after the period of Dutch Brazil.
+> In 1636 he traveled to Dutch Brazil in northeast of South America
+> at the invitation of the governor Johan Maurits van Nassau-Siegen.
 
+His landscapes really look like Dutch landscapes to me.
+Even with tropical vegetation, they just feel like Baroque Dutch landscapes.
+
+
+### Louis F. Post {#louis}
+
+{{< figure
+  src="Louis_Freeland_Post.jpg"
+  title="Louis Freeland Post"
+  caption="Louis F. Post. Source: Wikipedia"
+  height=60px
+  class="floatright"
+>}}
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Louis_F._Post)
+
+> Louis Freeland Post (November 15, 1849 – January 11, 1928)
+> was a prominent [Georgist](https://en.wikipedia.org/wiki/Georgism)
+> and the Assistant United States Secretary of Labor
+> during the closing year of the Wilson administration,
+> the period of the [Palmer Raids](https://en.wikipedia.org/wiki/Palmer_Raids)
+> and the First Red Scare,
+> where he had responsibility for the Bureau of Immigration.
+> Post considered the process to be a witch hunt
+> and is credited with preventing many deportations and freeing many innocent people.
 
 ### Marion Post Wolcott {#marion}
 
-{{% callout note %}}
-Someday this will be updated with real content
-{{% /callout %}}
+{{< figure
+  src="Marion_Post_Wolcott_1940.jpg"
+  title="Marion Post Wolcott"
+  caption="Marion Post Wolcott. Source: Wikipedia"
+  height=70px
+  class="floatright"
+>}}
+
+> Marion Post Wolcott (June 7, 1910 – November 24, 1990)
+> was an American photographer who worked for the Farm Security Administration
+> during the Great Depression,
+> documenting poverty, the [Jim Crow](https://en.wikipedia.org/wiki/Jim_Crow) South,
+> and deprivation.
+
+And the Wikipedia article goes on to say that she was from places very close to
+[my home town](https://en.wikipedia.org/wiki/West_Caldwell,_New_Jersey "West Caldwell, New Jersey").
+
+> Marion Post was born in [Montclair](https://en.wikipedia.org/wiki/Montclair,_New_Jersey),
+> New Jersey [...]
+> to Marion (née Hoyt; known as "Nan") and Walter Post, a physician.
+> She grew up in the family home in
+> [Bloomfield](https://en.wikipedia.org/wiki/Bloomfield,_New_Jersey),
+
+In a [2022 article](https://spice.fsi.stanford.edu/news/capturing-us-history-and-humanity-photographs-marion-post-wolcott "Capturing U.S. History and Humanity"),
+Carey Moncaster, Marion's grandchild, quotes from
+Marion's 1990 address at a Women in Photography conference:
+
+> Women have come a long way, but not far enough.
+> Ahead still are formidable hurdles.
+> Speak with your images from your heart and soul.
+> Give of yourself. Trust your gut reactions.
+> Suck out the juices—the essence of your life experiences.
+> Get on with it; it may not be too late.
 
 ### Pieter Post {#pieter}
 
