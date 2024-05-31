@@ -144,17 +144,17 @@ sections:
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
 
-  # - block: collection
-  #  id: featured
-  #  content:
-  #    title: Featured Publications
-  #    filters:
-  #      folders:
-  #        - publication
-  #      featured_only: true
-  #  design:
-  #    columns: '2'
-  #    view: card
+  - block: collection
+    id: talks
+    content:
+      title: Featured talks
+      filters:
+        folders:
+          - event
+        featured_only: true
+    design:
+      view: article-grid
+      columns: 1
 
   - block: collection
     content:
@@ -166,7 +166,7 @@ sections:
       filters:
         folders:
           - publication
-        exclude_featured: true
+        exclude_featured: false
     design:
       columns: '2'
       view: citation
