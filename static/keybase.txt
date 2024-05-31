@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jpgoldberg
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jeffrey.goldmark.org
+  * I am jpgoldberg (https://keybase.io/jpgoldberg) on keybase.
+  * I have a public key ASAbIuzikJbllg5QuktPAHpjJ3H8Ldr7Mf322swGWqcFPwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01013c332a46a9b2e970519857aef1ae03b5aabd8d41c98b5d58466fb6195208c4180a",
+      "host": "keybase.io",
+      "kid": "01201b22ece29096e5960e50ba4b4f007a632771fc2ddafb31fdf6dacc065aa7053f0a",
+      "uid": "1a19a59ca090e000a771ed1a890f2600",
+      "username": "jpgoldberg"
+    },
+    "merkle_root": {
+      "ctime": 1717175220,
+      "hash": "49e8e3bbd43e7a80c1a0cd7ed56aaaff5ed4c6954f35d009b2e7ac4db7fd7ff66447db6ad497784b4ac68ee1b05c85d586bae75eb2bed944cb0f0cc22da50592",
+      "hash_meta": "e063aa287d6d910129628a04b5fe03990b06af92a307e8f5b8127597641d5d09",
+      "seqno": 25777619
+    },
+    "service": {
+      "entropy": "baxPu5kzMMJjMYTuLq3PjqoX",
+      "hostname": "jeffrey.goldmark.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.5"
+  },
+  "ctime": 1717175261,
+  "expire_in": 504576000,
+  "prev": "f7d2feb9a5cd8401907df29946df747f9043d21632dda20e35b033f03695332e",
+  "seqno": 182,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGyLs4pCW5ZYOULpLTwB6Yydx/C3a+zH99trMBlqnBT8Kp3BheWxvYWTES5cCzLbEIPfS/rmlzYQBkH3ymUbfdH+QQ9IWMt2iDjWwM/A2lTMuxCBgUoVx/CqKqkfl/90Nz6cvxrRW+9rST5fu6Lxum/U5cAIBwqNzaWfEQMoAv/ihom117Op+wSs64vsyMnSQhAqd5RTDpZKnXmLZfxGgTZNd2MM82g6nFLGQK84uIjtOk6M20EZ8LkzsLwOoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCC1+mIJjY1Eb0mP0XKcHyp5ZE0p8AaqJ/FHZ3g45WzfBaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jpgoldberg
+
+==================================================================
