@@ -46,11 +46,11 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: pwcon22-with-notes.pdf
+url_slides: totp-talk.pdf
 
 url_code:
 url_pdf:
-url_video: https://www.infosecurity.us/blog/2022/10/21/bsideslv-2022-lucky13-passwordscon-jeffrey-p-goldbergs-can-a-password-management-service-safely-learn-about-users-passwords
+url_video: 
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -67,21 +67,19 @@ slides: ""
 projects: []
 ---
 
-Many services,
-and particularly 1Password,
-where I worked at the time this talk was presented,
-simultaneously have a need to understand how users are using the client applications
-while also providing strong and demonstrable privacy guarantees to those same users.
+Google's introduction of the `otpauth` URI scheme made it easy 
+for people and organization to deploy
+and for individuals to enroll in
+{{<abbr TOTP "Time-based One Time Password">}} authentication.
+However, the initial implementations and description of the scheme left a number of ambiguities in and inconsistences in place.
 
-This talk, as part of PasswordsCon (US) 2022, described the problem
-by first pointing out that mere removal of
-{{< abbr PII "Personally Identifying Information">}}
-is insufficient
-and by using an extreme example.
-If a solution could be found for the extremely sensitive user data
-than such a solution could be applied to all data.
+This 2019 PasswordsCon talk discussed those ambiguities and contradictions along with some of the consequences I had observed.
+I agrue that in general we need more well-constructed standards and complience with those standards, even though I don't offer a clear path for fixed TOTP.
 
-I then went on to discuss historical approaches used in the Social Sciences,
-leading up to concepts of differential privacy.
+## Context for these slides
 
+This talk was presented when I worked for 1Password.
+I have updated contact information in the slides and switched to typefaces which have freer licenses.
 
+PasswordCon has a tradition of including pictures of cats on slides that present background that most audience members are already familiar with.
+I had also been challenged to include something from my visit to the [Vasa Museum](https://www.vasamuseet.se/en)
