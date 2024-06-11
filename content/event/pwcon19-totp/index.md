@@ -21,7 +21,7 @@ date: 2019-11-19T16:15:00+1:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2024-06-10T14:26:24-05:00
+publishDate: 2019-11-19
 
 authors: [jpgoldberg]
 tags: []
