@@ -94,9 +94,9 @@ So it is easy to say what you mean when you do mean something to
 be a header of a new section of your document.
 But now let me move to some examples where the responsibility tell LateX what you mean takes a bit more work.
 
-### The dot-space (‘`. `') sequence
+### The dot-space (‘`. `’) sequence
 
-Consider text like 
+Consider text like
 
 ```text
 Dr. Smith wondered whether she should contact the F.B.I. about
@@ -105,7 +105,7 @@ but eventually she did call the F.B.I. That act changed her life
 and the lives of thousands of others.
 ```
 
-In that text we have four different instances of a dot-space, '`. `' sequence.
+In that text we have four different instances of a dot-space, ‘`. `’ sequence.
 
 1. `Dr. Smith`
 2. `F.B.I. about`
@@ -162,8 +162,24 @@ The underlying TeX algorithm will treat both 2 and 4 as not
 marking a sentence boundary.
 So LaTeX's output will be less optimal in in case 4, but it won't be horrid.
 Still, you can help LaTeX know that you mean a sentence break in case 4
-by writing '`F.B.I.\@ That`'.
-This is not nearly as important as using '`Dr.~Smith`', but it does help illustrate why LaTeX is so good at setting paragraphs when given the information it needs.
+by writing ‘`F.B.I.\@ That`’.
+This is not nearly as important as using ‘`Dr.~Smith`’, but it does help illustrate why LaTeX is so good at setting paragraphs when given the information it needs.
+
+{{< abbr "AYG" "All You Get" >}} systems
+place no such responsibility on the user,
+but they do so at a cost to their final output.
+To avoid a terrible line break in the “Dr. Smith” case
+they will actually try to avoid line breaks between what look like
+sentences.
+As a consequence, their general method will for breaking paragraphs into lines will produce results that are worse than something that 
+does attempt to take the meaning of sentence separation into account.
+What You Mean {{< abbr "WYM" "What You Mean" >}} systems,
+on the other hand,
+do place some additional responsibility on the user to communicate meaning.
+One payoff is improved output.
+
+
+
 
 
 [LaTeX]: https://www.latex-project.org/ "The LaTeX Project"
