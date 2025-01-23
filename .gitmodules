@@ -8,5 +8,5 @@
 	path = themes/github.com/hugomods/shortcodes
 	url = git@github.com:hugomods/shortcodes.git
 [submodule "themes/github.com/HugoBlox/theme-academic-cv"]
-	path = themes/github.com/HugoBlox/theme-academic-cv
+	path = themes/academic-cv
 	url = git@github.com:HugoBlox/theme-academic-cv.git
