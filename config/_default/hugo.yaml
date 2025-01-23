@@ -6,6 +6,8 @@
 title: Jeffrey Goldberg # Website name
 baseURL: 'https://jeffrey.goldmark.org/' # Website URL
 
+theme: "academic-cv"
+
 ############################
 ## LANGUAGE
 ############################
@@ -21,7 +23,7 @@ removePathAccents: true
 
 enableGitInfo: true
 summaryLength: 30
-paginate: 10
+# paginate: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
