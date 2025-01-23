@@ -1,3 +1,0 @@
-{{- $inner := trim .Inner "\r\n" -}}
-{{- highlight $inner "markdown" -}}
-{{- $inner | .Page.RenderString }}
