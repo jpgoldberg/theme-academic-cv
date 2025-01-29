@@ -46,8 +46,8 @@ print(key.hex())
 print(list(key))
 ```
 
-    ef3523a2cafa973f96008cb141e447
-    [239, 53, 35, 162, 202, 250, 151, 63, 150, 0, 140, 177, 65, 228, 71]
+    d6c26f41fb3d9fdf5c59131f827675
+    [214, 194, 111, 65, 251, 61, 159, 223, 92, 89, 19, 31, 130, 118, 117]
 
 
 Xor-ing the message with key gives us the ciphertext bytes
@@ -59,8 +59,8 @@ print(ciphertext.hex())
 print(list(ciphertext))
 ```
 
-    ae4157c3a991b75ee220e8d0368a66
-    [174, 65, 87, 195, 169, 145, 183, 94, 226, 32, 232, 208, 54, 138, 102]
+    97b61b209856bfbe2879777ef51854
+    [151, 182, 27, 32, 152, 86, 191, 190, 40, 121, 119, 126, 245, 24, 84]
 
 
 If you do not know the key, the _contents_ of the ciphertext (other than its length) tells you nothing you _didn't already know_ about the message.
@@ -108,7 +108,7 @@ The attacker takes the original ciphertext and xors it with the ciphertext to ge
 modified_ctext = utils.xor(ciphertext, dusk_dawn_diff)
 ```
 
-When the intended recipient decrypts the modified ciphertext they get the wrong messagew.
+When the intended recipient decrypts the modified ciphertext they get the wrong message.
 
 
 ```python
@@ -117,4 +117,117 @@ print(decrypted)
 ```
 
     b'Attack at dusk!'
+
+
+### Security games
+
+Security games help model a combination of adversary capabilities with security goals.
+
+The game or (challenger) is built from an encryption scheme which includes
+
+- a key generation function;
+- an encryption function;
+- and a decryption function.
+
+For our first example, we will use a shift cipher.
+
+
+```python
+def shift_cipher_encrypt(key: int, message: bytes) -> bytes:
+    ctext = bytes([(b + key) % 256 for b in message])
+    return ctext
+```
+
+And we can try it out.
+
+
+```python
+shift_cipher_encrypt(3, b"Attack at dawn")
+```
+
+
+
+
+    b'Dwwdfn#dw#gdzq'
+
+
+
+
+```python
+def shift_cipher_decrypt(key: int, message: bytes) -> bytes:
+    ctext = bytes([(b - key) % 256 for b in message])
+    return ctext
+```
+
+
+```python
+def shift_cipher_keygen() -> int:
+    return secrets.randbelow(256)
+```
+
+
+```python
+key = shift_cipher_keygen()
+
+m = b"Attack at dawn!"
+
+assert m == shift_cipher_decrypt(key, shift_cipher_encrypt(key, m))
+```
+
+For the IND-EAV (Indistinguishability in the presense of a eavesdropper) we won't be using the decryption function, so we just define the game with the key generation function and the encryption function.
+
+
+
+```python
+shift_eav_game = sec_games.IndEav(shift_cipher_keygen, shift_cipher_encrypt)
+```
+
+The challenger (the game) must pick a key and a bit, _b_ that it keeps to itself. This is done with the `initialize()` method.
+
+
+```python
+shift_eav_game.initialize()
+```
+
+The adversary picks two plaintexts.
+
+
+```python
+m0 = b"AA"
+m1 = b"AB"
+```
+
+We tell the challenger will encrypt one of them depending in its choice of bit _b_ and its key which it created during inititialization.
+
+
+```python
+ctext = shift_eav_game.encrypt_one(m0, m1)
+```
+
+Now the adversary uses its understanding of m0, m1, ctext and how the shift cipher works to try to construct a guess of whether m0 m1 was encrypted.
+
+In this case it is easy, because the shift cipher will encrypt each identical input byte the same way. Different input bytes will be encrypted differently.
+
+
+```python
+if ctext[0] == ctext[1]:
+    #  "AA" was encrypted
+    guess = False  # b is 0
+else:
+    # "AB" was encrypted
+    guess = True  # b is 1
+```
+
+And now we check whether the guess was correct
+
+
+```python
+shift_eav_game.finalize(guess)
+```
+
+
+
+
+    True
+
 
