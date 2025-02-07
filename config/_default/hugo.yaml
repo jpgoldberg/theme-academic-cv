@@ -49,7 +49,10 @@ taxonomies:
   publication_type: publication_types
   author: authors
 markup:
+  PygmentsCodeFences: true
+  PygmentsStyle: "vs"
   _merge: deep
+
 related:
   threshold: 80
   includeNewer: true

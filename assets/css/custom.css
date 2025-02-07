@@ -5,15 +5,15 @@ abbr[title], abbr[data-original-title] {
 }
 
 figure.floatright {
-	max-width: 30%;
-	height: auto;
-	float: right;
+  max-width: 30%;
+  height: auto;
+  float: right;
 }
 
 figure.floatleft {
-	max-width: 30%;
-	height: auto;
-	float: left;
+  max-width: 30%;
+  height: auto;
+  float: left;
 }
 
 div.highlight {
